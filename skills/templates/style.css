@@ -1,0 +1,187 @@
+/* video-to-docs PDF 样式表 */
+/* 适用于 md-to-pdf，参照专业文档排版规范 */
+
+/* === 基础排版 === */
+body {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #1a1a1a;
+  max-width: 100%;
+}
+
+/* === 标题层级 === */
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+}
+
+/* H1 后紧跟的副标题 blockquote */
+h1 + blockquote {
+  color: #6b7280;
+  font-size: 12px;
+  border-left: none;
+  padding-left: 0;
+  background: none;
+  margin-top: 4px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e40af;
+  margin-top: 28px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 20px;
+}
+
+/* === Callout 提示框 === */
+blockquote {
+  border-left: 4px solid #3b82f6;
+  background: #eff6ff;
+  padding: 10px 14px;
+  margin: 12px 0;
+  border-radius: 4px;
+  font-size: 12.5px;
+  color: #1e3a5f;
+}
+
+/* === 图片样式 === */
+img {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  max-width: 90%;
+  margin: 10px auto;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* === 表格 === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  margin: 12px 0;
+}
+
+th {
+  background: #f1f5f9;
+  font-weight: 600;
+  text-align: left;
+  color: #1e293b;
+}
+
+th,
+td {
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+}
+
+tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+/* === UI 元素粗体（深蓝色） === */
+strong {
+  color: #1e40af;
+}
+
+/* === 代码 === */
+code {
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: "Menlo", "Monaco", "Courier New", monospace;
+}
+
+pre {
+  background: #1e293b;
+  border-radius: 6px;
+  padding: 14px;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  color: #e2e8f0;
+  padding: 0;
+}
+
+/* === 列表 === */
+ul,
+ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+/* === 分隔线 === */
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 24px 0;
+}
+
+/* === 页脚声明 === */
+hr + em {
+  display: block;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 10px;
+  margin-top: 20px;
+}
+
+/* === 概述区域高亮 === */
+h2:first-of-type {
+  margin-top: 16px;
+}
+
+/* === 段落间距 === */
+p {
+  margin: 8px 0;
+}
+
+/* === 打印优化 === */
+@media print {
+  body {
+    font-size: 11px;
+  }
+
+  h1 {
+    font-size: 20px;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 16px;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 14px;
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 85%;
+    page-break-inside: avoid;
+  }
+
+  blockquote {
+    page-break-inside: avoid;
+  }
+}

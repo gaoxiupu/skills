@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Whisper models (large binary files)
+models/
+
+# Temporary audio files
+*.wav
+*.tmp
+
+# IDE
+.idea/
+.vscode/
+
+# Generated output
+docs/
