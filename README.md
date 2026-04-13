@@ -54,15 +54,7 @@ ln -s "$(pwd)/skills" ~/.claude/skills/video-to-docs
 复制以下 prompt，粘贴到 Claude Code 中，AI 会自动完成安装：
 
 ```
-请帮我安装 video-to-docs skill。执行以下步骤：
-
-1. 从 https://github.com/gaoxiupu/video-to-docs 克隆仓库到临时目录
-2. 创建目录 ~/.claude/skills/video-to-docs/
-3. 将仓库中 skills/ 目录下的所有文件（SKILL.md、scripts/、templates/、references/）复制到 ~/.claude/skills/video-to-docs/
-4. 验证 ~/.claude/skills/video-to-docs/SKILL.md 文件存在
-5. 告诉我安装完成
-
-安装完成后我就可以使用「视频转文档」功能了。
+npx skills add [<owner/repo>](https://github.com/gaoxiupu/video-to-docs)
 ```
 
 ## 使用方法
