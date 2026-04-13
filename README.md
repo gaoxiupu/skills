@@ -26,35 +26,10 @@
 
 ## 安装
 
-### 方式一：手动安装
-
-克隆仓库并将 `skills/` 目录的内容放到 Claude Code 的 skills 目录：
-
-```bash
-# 克隆仓库
-git clone https://github.com/gaoxiupu/video-to-docs.git
-cd video-to-docs
-
-# 复制到 Claude Code skills 目录
-mkdir -p ~/.claude/skills/video-to-docs
-cp -r skills/* ~/.claude/skills/video-to-docs/
-
-# 验证安装
-ls ~/.claude/skills/video-to-docs/SKILL.md
-```
-
-或者使用符号链接（方便后续更新）：
-
-```bash
-ln -s "$(pwd)/skills" ~/.claude/skills/video-to-docs
-```
-
-### 方式二：AI 安装
-
 复制以下 prompt，粘贴到 Claude Code 中，AI 会自动完成安装：
 
 ```
-npx skills add [<owner/repo>](https://github.com/gaoxiupu/video-to-docs)
+npx skills add https://github.com/gaoxiupu/video-to-docs/skills
 ```
 
 ## 使用方法
